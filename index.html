@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>霓虹战机 · NEON STRIKE</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #000;
+    overflow: hidden;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Orbitron', 'Rajdhani', 'Segoe UI', monospace;
+  }
+  #stage {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(ellipse at 50% 30%, #0a0420 0%, #05010f 60%, #000 100%);
+  }
+  #game {
+    display: block;
+    background: #000;
+    box-shadow: 0 0 60px rgba(0, 245, 255, .18), 0 0 140px rgba(255, 43, 214, .10);
+    border-radius: 12px;
+    touch-action: none;
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game"></canvas>
+  </div>
+
+  <!-- 引擎底座 -->
+  <script src="src/config.js"></script>
+  <script src="src/core/Pool.js"></script>
+  <script src="src/core/Collision.js"></script>
+  <script src="src/core/Storage.js"></script>
+  <script src="src/core/Audio.js"></script>
+  <script src="src/core/Renderer.js"></script>
+  <script src="src/core/Input.js"></script>
+  <script src="src/core/Loop.js"></script>
+
+  <!-- 实体层 -->
+  <script src="src/entities/Entity.js"></script>
+  <script src="src/entities/Particle.js"></script>
+  <script src="src/entities/Bullet.js"></script>
+  <script src="src/entities/PowerUp.js"></script>
+  <script src="src/entities/Wingman.js"></script>
+  <script src="src/entities/Player.js"></script>
+  <script src="src/entities/Enemy.js"></script>
+  <script src="src/entities/Boss.js"></script>
+
+  <!-- 系统层 -->
+  <script src="src/systems/WeaponSystem.js"></script>
+  <script src="src/systems/SkillSystem.js"></script>
+  <script src="src/systems/BuffSystem.js"></script>
+  <script src="src/systems/ComboSystem.js"></script>
+  <script src="src/systems/ScoreSystem.js"></script>
+  <script src="src/systems/Spawner.js"></script>
+
+  <!-- UI -->
+  <script src="src/ui/Skin.js"></script>
+  <script src="src/ui/HUD.js"></script>
+
+  <!-- 场景层 -->
+  <script src="src/scenes/BootScene.js"></script>
+  <script src="src/scenes/ModeSelectScene.js"></script>
+  <script src="src/scenes/MenuScene.js"></script>
+  <script src="src/scenes/BuffScene.js"></script>
+  <script src="src/scenes/ResultScene.js"></script>
+  <script src="src/scenes/GameScene.js"></script>
+
+  <!-- 主控 -->
+  <script src="src/core/Game.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
